@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
       <Routes>
       <Route path="Yenicami" element={<Yenicami />} />
-        </Routes>
+      <Route exact path="/" element={
       <Container maxWidth="lg" sx={{ textAlign: "center", mt: "3rem" }}>
         <AuthContext>
           <Loading />
@@ -31,7 +31,8 @@ function App() {
           <Upload />
           <ImagesList />
         </AuthContext>
-      </Container>       
+      </Container>} /> 
+      </Routes> 
       </BrowserRouter>
       </>
 
