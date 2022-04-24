@@ -17,17 +17,13 @@ import {
   MDBCollapse,
 } from "mdb-react-ui-kit";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Yenicami from "../Pages/Futbol/Yenicami/Yenicami";
+import { BrowserRouter } from "react-router-dom";
 
 export default function Navbar() {
   const [showBasic, setShowBasic] = useState(false);
 
   return (
     <BrowserRouter>
-    {/* <Routes>
-    <Route path="Yenicami" element={<Yenicami />} />
-    </Routes> */}
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
         <MDBNavbarBrand href="#">Cemil Garip Photography</MDBNavbarBrand>
@@ -56,7 +52,7 @@ export default function Navbar() {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <MDBDropdownLink href="/yenicami">Yenicami AK</MDBDropdownLink>
+                    <MDBDropdownLink href="/Yenicami">Yenicami AK</MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <MDBDropdownLink>Mağusa Türk Gücü</MDBDropdownLink>
