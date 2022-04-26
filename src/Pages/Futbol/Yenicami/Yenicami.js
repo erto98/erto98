@@ -1,16 +1,27 @@
-import { useState } from 'react';
-import Form from '../../../components/upload/Form';
-import ProgressList from '../../../components/upload/progressList/ProgressList';
-
+import React from 'react'
+import ImagesList from "../../../components/imagesList/ImagesList";
+import Nav from "../../../components/Nav";
+import Upload from "../../../components/upload/Upload";
+import { Container } from "@mui/material";
+import AuthContext from "../../../context/AuthContext";
+import MainNotification from "../../../components/MainNotification";
+import Loading from "../../../components/Loading";
+import Verification from "../../../components/user/Verification";
+import Modal from "../../../components/Modal";
 
 const Yenicami = () => {
-  const [files, setFiles] = useState([]);
   return (
     <div>
-      <Form setFiles={setFiles} />
-      <ProgressList files={files} />
-    </div>
-  );
-};
 
-export default Yenicami;
+      <Container maxWidth="lg" sx={{ textAlign: "center", mt: "3rem" }}>
+    <AuthContext>
+     
+      <Upload />
+    <ImagesList />
+    </AuthContext>
+  </Container> 
+  </div>
+  )
+}
+
+export default Yenicami
