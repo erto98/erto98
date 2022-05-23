@@ -52,7 +52,7 @@ export default function Navbar() {
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <MDBDropdownLink href="/Yenicami">Yenicami AK</MDBDropdownLink>
+                    <MDBDropdownLink href="/yenicami">Yenicami AK</MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <MDBDropdownLink>Mağusa Türk Gücü</MDBDropdownLink>
@@ -88,7 +88,7 @@ export default function Navbar() {
                     <MDBDropdownLink>Baf Ülkü Yurdu</MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
-                    <MDBDropdownLink>Binatlı YSK</MDBDropdownLink>
+                    <MDBDropdownLink href="/binatli">Binatlı YSK</MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <MDBDropdownLink>Girne Halk Evi</MDBDropdownLink>

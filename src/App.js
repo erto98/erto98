@@ -8,7 +8,7 @@ import MainNotification from "./components/MainNotification";
 import Loading from "./components/Loading";
 import Verification from "./components/user/Verification";
 import Navbar from "./navbar/navbar";
-import Yenicami from "./Pages/Futbol/Yenicami/Yenicami";
+import Takim from "./Pages/Takim";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MDBDropdownLink } from "mdb-react-ui-kit";
 
@@ -19,19 +19,7 @@ function App() {
       <Navbar />
       <BrowserRouter>
       <Routes>
-      <Route path="Yenicami" element={<Yenicami />} />
-      <Route exact path="/" element={
-      <Container maxWidth="lg" sx={{ textAlign: "center", mt: "3rem" }}>
-        <AuthContext>
-          <Loading />
-          <Modal />
-          <Verification />
-          <MainNotification />
-          <Nav />
-          <Upload />
-          <ImagesList />
-        </AuthContext>
-      </Container>} /> 
+      <Route path="/:takim" element={<Takim />} />
       </Routes> 
       </BrowserRouter>
       </>

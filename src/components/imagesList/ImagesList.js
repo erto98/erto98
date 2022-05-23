@@ -17,9 +17,14 @@ function srcset(image, size, rows = 1, cols = 1) {
   };
 }
 
-export default function ImagesList() {
+export default function ImagesList({ takim }) {
   const { currentUser } = useAuth();
-  const { documents } = useFirestore('gallery');
+  const { documents } = useFirestore(takim);
+
+  console.log(
+    documents,  takim, 'vlah'
+  )
+  
   return (
     <SimpleReactLightbox>
       <SRLWrapper>

@@ -7,7 +7,8 @@ import uploadFileProgress from '../../../firebase/uploadFileProgress';
 import addDocument from '../../../firebase/addDocument';
 import { useAuth } from '../../../context/AuthContext';
 
-const ProgressItem = ({ file }) => {
+const ProgressItem = ({ file, takim }) => {
+  console.log(takim)
   const [progress, setProgress] = useState(0);
   const [imageURL, setImageURL] = useState(null);
   const { currentUser, setAlert } = useAuth();
@@ -17,7 +18,7 @@ const ProgressItem = ({ file }) => {
       try {
         const url = await uploadFileProgress(
           file,
-          `gallery/${currentUser?.uid}`,
+          `${takim}/${currentUser?.uid}`,
           imageName,
           setProgress
         );
@@ -28,7 +29,7 @@ const ProgressItem = ({ file }) => {
           uName: currentUser?.displayName || '',
           uPhoto: currentUser?.photoURL || '',
         };
-        await addDocument('gallery', galleryDoc, imageName);
+        await addDocument(takim, galleryDoc, imageName);
         setImageURL(null);
       } catch (error) {
         setAlert({
