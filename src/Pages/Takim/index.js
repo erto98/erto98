@@ -4,6 +4,8 @@ import Upload from "../../components/upload/Upload";
 import { Container } from "@mui/material";
 import AuthContext from "../../context/AuthContext";
 import { useLocation, useParams } from 'react-router';
+import Login from '../../components/user/Login';
+
 
 
 const TakimSayfasi = () => {
@@ -11,14 +13,12 @@ const TakimSayfasi = () => {
 
   return (
     <div>
-
       <Container maxWidth="lg" sx={{ textAlign: "center", mt: "3rem" }}>
     <AuthContext>
-     
       <Upload takim={params.takim} />
     <ImagesList takim={params.takim} />
     </AuthContext>
-  </Container> 
+  </Container>
   </div>
   )
 }
